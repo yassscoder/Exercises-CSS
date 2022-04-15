@@ -16,7 +16,8 @@ body {
 header {
   grid-area: header;
   background-color: silver;
-  text-align: center;
+  display: grid;
+  place-items: center;
   font-size: large;
   padding: 0.5rem;
 }
@@ -55,4 +56,32 @@ aside > p {
 footer,
 aside {
   padding: 1rem;
+}
+
+@media (min-width: 1200px) {
+  body {
+    grid-template-areas:
+      "header header header header"
+      "main main main aside"
+      "footer footer footer aside";
+  }
+  main {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  footer {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .aside-title::before {
+    content: "";
+    background: url("./images/Desktop.png");
+    display: block;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+  }
 }
