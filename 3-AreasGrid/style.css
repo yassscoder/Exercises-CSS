@@ -3,3 +3,56 @@
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  min-height: 100vh;
+  font-family: sans-serif;
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "main main main"
+    "footer aside aside";
+}
+
+header {
+  grid-area: header;
+  background-color: silver;
+  text-align: center;
+  font-size: large;
+  padding: 0.5rem;
+}
+
+main {
+  grid-area: main;
+  padding: 1rem;
+}
+main > section {
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+}
+footer {
+  grid-area: footer;
+  background-color: cyan;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+section > h2 {
+  margin-bottom: 1rem;
+}
+
+section > p {
+  margin-bottom: 1rem;
+}
+aside {
+  grid-area: aside;
+  background-color: rgb(141, 139, 238);
+}
+aside > p {
+  margin-bottom: 1rem;
+}
+footer,
+aside {
+  padding: 1rem;
+}
