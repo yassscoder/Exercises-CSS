@@ -23,4 +23,22 @@ svg {
   fill: gray;
 }
 
+.like {
+  animation-name: changeColorHeart;
+  animation-duration: 2s;
+}
 
+@keyframes changeColorHeart {
+  20% {
+    transform: scale(1.5);
+    fill: red;
+  }
+  40% {
+    transform: scale(1);
+    fill: red;
+  }
+  80% {
+    transform: scale(1.5);
+    fill: red;
+  }
+}
