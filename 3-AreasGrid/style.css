@@ -64,11 +64,14 @@ aside {
       "header header header header"
       "main main main aside"
       "footer footer footer aside";
+    grid-template-rows: 1fr 3fr 1fr;
+
+    grid-template-rows: 1fr 5fr 1fr;
   }
   main {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 2rem;
   }
   footer {
     flex-direction: row;
